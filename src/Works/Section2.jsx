@@ -50,7 +50,7 @@ function Section2() {
       </div>
       <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 laptop:gap-10">
         {data.map((data, i) => (
-          <div key={i} className="flex items-center  flex-col mb-5">
+          <div key={i} className="flex items-center   flex-col mb-5">
             <Tilt
               tiltMaxAngleX={10} // Customize tilt angles
               tiltMaxAngleY={10}
@@ -68,7 +68,7 @@ function Section2() {
                 />
               </div>
             </Tilt>
-            <div className="py-5">
+            <div className="tablet:py-5 py-2">
               <p
                 className="text-xs
               max-w-md tablet:text-sm text-center laptop:text-base"
