@@ -42,7 +42,7 @@ function Section2() {
     },
   ];
   return (
-    <div className="h-screen w-full laptop:px-16 px-2">
+    <div className="h-fit w-full laptop:px-16 px-2">
       <div className="flex justify-center items-center w-full tablet:h-[10rem] h-[6rem]">
         <p className="tablet:text-4xl text-sm font-medium text-center ">
           Explore a Selection of the Maison's Creations
@@ -62,7 +62,7 @@ function Section2() {
               <div className="overflow-hidden">
                 <Image
                   src={data.img}
-                  className="object-cover h-full w-full hover:scale-125 transition-all ease-in-out duration-700"
+                  className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
                   width={200}
                   height={200}
                 />
