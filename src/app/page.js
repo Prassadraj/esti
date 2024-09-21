@@ -5,6 +5,8 @@ import Section2 from "@/Works/Section2";
 import Section3 from "@/Works/Section3";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Section4 from "@/Works/Section4";
+import Section5 from "@/Works/Section5";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -24,6 +26,8 @@ export default function Home() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
+      <Section5 />
     </div>
   );
 }

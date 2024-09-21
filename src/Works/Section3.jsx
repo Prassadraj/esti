@@ -45,6 +45,17 @@ const Section1 = ({ scrollYProgress }) => {
         placeholder="blur"
         blurDataURL="cxc"
         fill
+        className="hidden tablet:block"
+      />
+      <Image
+        src={
+          "https://plus.unsplash.com/premium_photo-1701069513354-6ec4e6944d42?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+        alt="img"
+        placeholder="blur"
+        blurDataURL="cxc"
+        className="block tablet:hidden"
+        fill
       />
     </motion.div>
   );
@@ -55,31 +66,35 @@ const Section2 = ({ scrollYProgress }) => {
   const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
   const data = [
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_bags/Women_Bags_WW_HP_Category_Push_V20240726_DII.jpg?wid=490",
-      title: "Womens Bag's",
+      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-travel-stamp-flower-t-shirt%20--FSTS09OB0000_PM2_Front%20view.png?wid=490&hei=490",
+      title: "Travel Stamp Flower T-Shirt ",
+      price: 999,
     },
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_slg/Women_SLG_WW_HP_Category_Push_V20240726_DII.jpg?wid=490",
-      title: "  Women's Small Leather Goods",
+      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-neverfull-bandouliere-inside-out-bb--M12109_PM2_Front%20view.png?wid=490&hei=490",
+      title: " Neverfull Bandoulière Inside Out BB",
+      price: 999,
     },
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/men_shoes/Men_Shoes_Sneakers_WW_HP_Category_Push_20240425_DII.jpg?wid=490",
-      title: " Men's Shoes",
+      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-medallion-scarf--M94853_PM2_Front%20view.png?wid=490&hei=490s",
+      title: "LV Medallion Scarf",
+      price: 999,
     },
 
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_fashionjewelry/Women_FashionJewelry_Category_Push_20240425_DII.jpg?wid=490",
-      title: "Women's Fashion Jewellery",
+      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bella--M12125_PM2_Front%20view.png?wid=1090&hei=1090",
+      title: "Bella",
+      price: 999,
     },
   ];
   return (
     <motion.div style={{ scale, rotate }} className="relative h-screen">
-      <div className="h-screen w-full grid grid-cols-2 tablet:grid-cols-4 bg-white place-items-center">
-        {data.map((item, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center justify-center mt-10"
-          >
+      <div
+        className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 bg-white
+      h-full laptop:gap-10 p-2 tablet:pt-28 tablet:px-5 laptop:px-10"
+      >
+        {data.map((data, i) => (
+          <div key={i} className="flex  flex-col mb-5">
             <Tilt
               tiltMaxAngleX={10} // Customize tilt angles
               tiltMaxAngleY={10}
@@ -88,18 +103,32 @@ const Section2 = ({ scrollYProgress }) => {
               scale={1.05} // Slightly scale on hover
               transitionSpeed={500} // Smooth transition
             >
-              <div className="overflow-hidden">
+              <div
+                className="overflow-hidden shadow-md shadow-gray-300
+                laptop:h-[350px] border bg-gradient-to-tr
+                   from-gray-400
+                 via-slate-200 to-slate-200"
+              >
                 <Image
-                  src={item.img}
+                  src={data.img}
                   className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
                   width={200}
                   height={200}
                 />
               </div>
             </Tilt>
-            <div className="tablet:py-5 py-2">
-              <p className="text-xs max-w-md tablet:text-sm text-center laptop:text-base">
-                {item.title}
+            <div className="tablet:py-3 py-2">
+              <p
+                className="text-xs
+              max-w-md tablet:text-sm text-left"
+              >
+                {data.title}
+              </p>
+              <p
+                className="text-xs
+              max-w-md text-left"
+              >
+                ₹{data.price}
               </p>
             </div>
           </div>
