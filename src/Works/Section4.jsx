@@ -111,6 +111,7 @@ function Section2({ scrollYProgress }) {
                     className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
                     width={200}
                     height={200}
+                    alt="img"
                   />
                 </div>
               </Tilt>
