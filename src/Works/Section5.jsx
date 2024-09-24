@@ -11,7 +11,7 @@ function Section5() {
 
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/services/LV_Gifting_WW_HP_Services_Push_20240425_DII.jpg?wid=2400",
-      title: "    Art of Gifting",
+      title: `Art of Gifting`,
       price: 999,
     },
 

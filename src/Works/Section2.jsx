@@ -13,24 +13,24 @@ function Section2() {
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_slg/Women_SLG_WW_HP_Category_Push_V20240726_DII.jpg?wid=490",
-      title: "  Women's Small Leather Goods",
+      title: `Women's Small Leather Goods`,
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/men_shoes/Men_Shoes_Sneakers_WW_HP_Category_Push_20240425_DII.jpg?wid=490",
-      title: " Men's Shoes",
+      title: `Men's Shoes`,
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/men_slg/Men_SLG_WW_HP_Category_Push_20240425_DII.jpg?wid=490",
-      title: "Men's Small Leather Goods",
+      title: `Men's Small Leather Goods`,
     },
 
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/men_bags/Men_LG_WW_HP_Category_Push_20240425_DII.jpg?wid=490",
-      title: " Men's Bags",
+      title: ` Men's Bags`,
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/men_accessories/Men_Belt_WW_HP_Category_Push_V20240517_DII.jpg?wid=490",
-      title: "Men's Belts",
+      title: `Men's Belts`,
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/perfumes/Perfumes_WW_HP_Category_Push_20240225_DII.jpg?wid=490",
@@ -38,7 +38,7 @@ function Section2() {
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_fashionjewelry/Women_FashionJewelry_Category_Push_20240425_DII.jpg?wid=490",
-      title: "Women's Fashion Jewellery",
+      title: `Women's Fashion Jewellery`,
     },
   ];
   return (
