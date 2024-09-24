@@ -28,8 +28,8 @@ function Section5() {
           Estilo Services
         </p>
         <p className="text-center px-1 capitalize text-sm tablet:text-base font-normal max-w-lg">
-          Estilo offers complementary wrapping on all orders, carefully packaged
-          in the Maison's iconic boxes.
+          {`Estilo offers complementary wrapping on all orders, carefully packaged
+          in the Maison's iconic boxes.`}
         </p>
       </div>
 
@@ -50,6 +50,7 @@ function Section5() {
                   className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
                   width={200}
                   height={200}
+                  alt={data.title} // Added alt attribute
                 />
               </div>
 

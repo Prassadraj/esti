@@ -9,7 +9,7 @@ function Section2() {
   const data = [
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_bags/Women_Bags_WW_HP_Category_Push_V20240726_DII.jpg?wid=490",
-      title: "Womens Bag's",
+      title: `Womens Bag's`,
     },
     {
       img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/category/women_slg/Women_SLG_WW_HP_Category_Push_V20240726_DII.jpg?wid=490",
