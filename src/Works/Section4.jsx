@@ -32,7 +32,7 @@ function Section1({ scrollYProgress }) {
     <>
       <motion.div
         style={{ scale, rotate }}
-        className="sticky top-20 h-screen pb-[10vh]"
+        className="sticky top-16 h-screen pb-[10vh]"
       >
         {/* <Image
           src={
