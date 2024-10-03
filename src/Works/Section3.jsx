@@ -77,7 +77,7 @@ const Section2 = ({ scrollYProgress }) => {
       price: 999,
     },
     {
-      img: "https://images.unsplash.com/photo-1677443844012-7927843ad989?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      img: "https://images.unsplash.com/photo-1677359040296-3d94c8286122?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: " Neverfull Bandoulière Inside Out BB",
       price: 999,
     },
@@ -88,7 +88,7 @@ const Section2 = ({ scrollYProgress }) => {
     },
 
     {
-      img: "https://images.unsplash.com/photo-1677443844012-7927843ad989?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      img: "https://images.unsplash.com/photo-1677359040296-3d94c8286122?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Bella",
       price: 999,
     },
