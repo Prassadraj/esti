@@ -4,19 +4,19 @@ import React from "react";
 function Section5() {
   const data = [
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/services/LV_ContactUs_WW_HP_Services_Push_20240425_DII.jpg?wid=2400",
+      img: "/b1.webp",
       title: "Services",
       price: 999,
     },
 
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/services/LV_Gifting_WW_HP_Services_Push_20240425_DII.jpg?wid=2400",
+      img: "/b2.jpg",
       title: `Art of Gifting`,
       price: 999,
     },
 
     {
-      img: "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/services/LV_Personalization_WW_HP_Services_Push_20240425_DII.jpg?wid=2400",
+      img: "/b3.jpg",
       title: "Personalisation",
       price: 999,
     },

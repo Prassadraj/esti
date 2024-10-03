@@ -34,7 +34,7 @@ function Section1({ scrollYProgress }) {
         style={{ scale, rotate }}
         className="sticky top-20 h-screen pb-[10vh]"
       >
-        <Image
+        {/* <Image
           src={
             "https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/brand-content-coremedia/men/2024/collection/lv-fall-24/M_BC_LVFall_Aug24_08_DI3.jpg?wid=2400"
           }
@@ -43,7 +43,13 @@ function Section1({ scrollYProgress }) {
           blurDataURL="cxc"
           fill
           className="hidden tablet:block"
-        />
+        /> */}
+        <video
+          autoPlay
+          className="w-full h-full object-cover"
+          muted
+          src="/clothing.mp4"
+        ></video>
         <Image
           src={
             "https://plus.unsplash.com/premium_photo-1664202526580-444f042c475b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -61,23 +67,23 @@ function Section1({ scrollYProgress }) {
 function Section2({ scrollYProgress }) {
   const data = [
     {
-      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-only-lv-mini-comfy-scarf--M90804_PM2_Front%20view.png?wid=490&hei=490",
+      img: "/m1.avif",
       title: "Only LV Mini Comfy Scarf",
       price: 999,
     },
     {
-      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-cotton-crewneck--HSN06WAUR900_PM2_Front%20view.png?wid=490&hei=490",
+      img: "/m2.avif",
       title: "Monogram Short-Sleeved Cotton Crewneck",
       price: 999,
     },
     {
-      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-gradient-bracelet--M8722E_PM2_Front%20view.png?wid=490&hei=490",
+      img: "/m3.avif",
       title: "LV Gradient Bracelet",
       price: 999,
     },
 
     {
-      img: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-multiple-wallet--M11547_PM2_Front%20view.png?wid=490&hei=490",
+      img: "/m4.avif",
       title: "Multiple Wallet",
       price: 999,
     },
