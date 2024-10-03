@@ -35,7 +35,7 @@ const Section1 = ({ scrollYProgress }) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="sticky top-16 h-screen pb-[10vh]"
+      className="sticky tablet:top-16 h-screen pb-[10vh]"
     >
       {/* <Image
         src={
@@ -49,7 +49,7 @@ const Section1 = ({ scrollYProgress }) => {
       /> */}
       <video
         src="/hm.mp4"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover hidden tablet:block"
         autoPlay
         muted
       ></video>

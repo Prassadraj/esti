@@ -32,7 +32,7 @@ function Section1({ scrollYProgress }) {
     <>
       <motion.div
         style={{ scale, rotate }}
-        className="sticky top-16 h-screen pb-[10vh]"
+        className="sticky tablet:top-16 h-screen pb-[10vh]"
       >
         {/* <Image
           src={
@@ -46,7 +46,7 @@ function Section1({ scrollYProgress }) {
         /> */}
         <video
           autoPlay
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover hidden tablet:block"
           muted
           src="/clothing.mp4"
         ></video>
