@@ -27,6 +27,7 @@ function Section5() {
         <p className="text-center text-base font-medium  tablet:font-normal laptop:text-4xl">
           Estilo Services
         </p>
+
         <p className="text-center px-1 capitalize text-sm tablet:text-base font-normal max-w-lg">
           {`Estilo offers complementary wrapping on all orders, carefully packaged in the Maison&apos;s iconic boxes.`}
         </p>

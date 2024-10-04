@@ -52,6 +52,7 @@ const Section1 = ({ scrollYProgress }) => {
         className="h-full w-full object-cover hidden tablet:block"
         autoPlay
         muted
+        loop
       ></video>
       <Image
         src={

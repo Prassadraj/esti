@@ -48,6 +48,7 @@ function Section1({ scrollYProgress }) {
           autoPlay
           className="w-full h-full object-cover hidden tablet:block"
           muted
+          loop
           src="/clothing.mp4"
         ></video>
         <Image
