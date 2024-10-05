@@ -5,6 +5,22 @@ import Image from "next/image";
 import React from "react";
 const data = [
   {
+    img: "/girl.jpg",
+    title: `Women's`,
+  },
+  {
+    img: "/boy.jpg",
+    title: `Men's`,
+  },
+  {
+    img: "/childboy.jpg",
+    title: `Boy's`,
+  },
+  {
+    img: "/kidgirl.avif",
+    title: `Girl's`,
+  },
+  {
     img: "/w1.webp",
     title: `Bags`,
   },
@@ -20,22 +36,6 @@ const data = [
     img: "/w4.webp",
     title: ` Small Leather Goods`,
   },
-  {
-    img: "/w4.webp",
-    title: `Bags`,
-  },
-  {
-    img: "/w3.webp",
-    title: `Belts`,
-  },
-  {
-    img: "/w2.webp",
-    title: "Perfumes",
-  },
-  {
-    img: "/w1.webp",
-    title: `Fashion Jewellery`,
-  },
 ];
 function Section2() {
   return (
@@ -45,7 +45,7 @@ function Section2() {
           {` Explore a Selection of the Maison's Creations`}
         </p>
       </div>
-      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 laptop:gap-10">
+      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-1 laptop:gap-10">
         {data.map((item, i) => (
           <div key={i} className="flex items-center flex-col mb-5">
             <Tilt
@@ -56,12 +56,15 @@ function Section2() {
               scale={1.05}
               transitionSpeed={500}
             >
-              <div className="overflow-hidden">
+              <div
+                className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[180px] tablet:w-[180px] 
+              w-[120px] h-[180px]"
+              >
                 <Image
                   src={item.img}
-                  className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
-                  width={200}
-                  height={200}
+                  className="object-cover h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                  fill
+                  quality={100}
                   alt={item.title} // Added alt prop
                 />
               </div>

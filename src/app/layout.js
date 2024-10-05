@@ -1,5 +1,6 @@
+import Nav from "@/Works/Nav";
 import "./globals.css";
-import { Montserrat } from "next/font/google"; // Update this line
+import { Montserrat } from "next/font/google";
 
 export const metadata = {
   title: "Estilo",
@@ -14,7 +15,10 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <Nav />
+        <div className="tablet:mt-16 mt-12">{children}</div>
+      </body>
     </html>
   );
 }

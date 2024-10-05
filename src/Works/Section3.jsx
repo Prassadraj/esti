@@ -69,27 +69,27 @@ const Section1 = ({ scrollYProgress }) => {
 };
 
 const Section2 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.8], [5, 0]);
   const data = [
     {
-      img: "https://images.unsplash.com/photo-1677359040296-3d94c8286122?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/wo1.jpg",
       title: "Travel Stamp Flower T-Shirt ",
       price: 999,
     },
     {
-      img: "https://images.unsplash.com/photo-1677359040296-3d94c8286122?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/wo2.jpg",
       title: " Neverfull Bandoulière Inside Out BB",
       price: 999,
     },
     {
-      img: "https://images.unsplash.com/photo-1677359040296-3d94c8286122?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/wo3.jpg",
       title: "LV Medallion Scarf",
       price: 999,
     },
 
     {
-      img: "https://images.unsplash.com/photo-1677359040296-3d94c8286122?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/wo4.jpg",
       title: "Bella",
       price: 999,
     },
@@ -111,16 +111,15 @@ const Section2 = ({ scrollYProgress }) => {
               transitionSpeed={500} // Smooth transition
             >
               <div
-                className="overflow-hidden shadow-md shadow-gray-300
-                laptop:h-[350px] border bg-gradient-to-tr
-                   from-gray-400
-                 via-slate-200 to-slate-200"
+                className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[180px] tablet:w-[180px] 
+              w-[120px] h-[180px]"
               >
                 <Image
                   src={data.img}
-                  className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
-                  width={200}
-                  height={200}
+                  className="object-cover h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                  fill
+                  quality={100}
+                  priority
                   alt="image"
                 />
               </div>

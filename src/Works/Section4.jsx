@@ -68,29 +68,29 @@ function Section1({ scrollYProgress }) {
 function Section2({ scrollYProgress }) {
   const data = [
     {
-      img: "/m1.avif",
+      img: "/men1.jpg",
       title: "Only LV Mini Comfy Scarf",
       price: 999,
     },
     {
-      img: "/m2.avif",
+      img: "/men2.jpg",
       title: "Monogram Short-Sleeved Cotton Crewneck",
       price: 999,
     },
     {
-      img: "/m3.avif",
+      img: "/men3.jpg",
       title: "LV Gradient Bracelet",
       price: 999,
     },
 
     {
-      img: "/m4.avif",
+      img: "/men4.jpg",
       title: "Multiple Wallet",
       price: 999,
     },
   ];
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [-5, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.8], [-5, 0]);
   return (
     <>
       <motion.div style={{ scale, rotate }} className="relative h-screen">
@@ -109,15 +109,17 @@ function Section2({ scrollYProgress }) {
                 transitionSpeed={500} // Smooth transition
               >
                 <div
-                  className="overflow-hidden shadow-md shadow-gray-300 border bg-gradient-to-br
+                  className="shadow-md bg-gradient-to-br
                    from-black/20
-                 via-gray-100 to-white laptop:h-[350px]"
+                 via-gray-100 to-white overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[180px] tablet:w-[180px] 
+              w-[120px] h-[180px]"
                 >
                   <Image
                     src={data.img}
-                    className="object-cover h-full w-full hover:scale-105 transition-all ease-in-out duration-700"
-                    width={200}
-                    height={200}
+                    className="object-cover h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                    fill
+                    priority
+                    quality={100}
                     alt="img"
                   />
                 </div>

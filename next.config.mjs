@@ -7,6 +7,7 @@ const nextConfig = {
       "posters.freecaster.com",
       "img.freepik.com",
       "images.unsplash.com",
+
       "plus.unsplash.com",
       "in.louisvuitton.com",
       "images.unsplash.com",

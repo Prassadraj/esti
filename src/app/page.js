@@ -20,9 +20,6 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <div className="">
-        <Nav />
-      </div>
       <Section1 />
       <Section2 />
       <Section3 />
