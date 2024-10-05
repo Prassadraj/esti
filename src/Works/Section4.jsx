@@ -52,9 +52,7 @@ function Section1({ scrollYProgress }) {
           src="/clothing.mp4"
         ></video>
         <Image
-          src={
-            "https://plus.unsplash.com/premium_photo-1664202526580-444f042c475b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
+          src='/mobile.avif'
           className="block tablet:hidden"
           alt="img"
           placeholder="blur"
@@ -95,7 +93,7 @@ function Section2({ scrollYProgress }) {
     <>
       <motion.div style={{ scale, rotate }} className="relative h-screen">
         <div
-          className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 bg-white
+          className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 bg-white place-items-center
       h-full laptop:gap-10 p-2 tablet:pt-28 tablet:px-5 laptop:px-10"
         >
           {data.map((data, i) => (

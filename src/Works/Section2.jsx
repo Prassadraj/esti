@@ -64,6 +64,7 @@ function Section2() {
                   src={item.img}
                   className="object-cover h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                   fill
+                  priority
                   quality={100}
                   alt={item.title} // Added alt prop
                 />
