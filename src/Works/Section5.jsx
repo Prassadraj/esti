@@ -17,7 +17,7 @@ function Section5() {
       map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31091.979710693377!2d80.227366!3d13.067628!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526688b6f91fb7%3A0xe5b492eb2515d1b4!2sShoppers%20Corner%20(PayLess-ShopMore)!5e0!3m2!1sen!2sin!4v1728128002193!5m2!1sen!2sin",
 
       title: "Aminjikarai Address Location",
-      info: ``,
+      info: `No. 144, Nelson Manickom Road,Officers Colony,Aminjikarai,Chennai,Tamil Nadu 600029`,
     },
   ];
 

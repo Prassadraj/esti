@@ -52,7 +52,7 @@ function Section1({ scrollYProgress }) {
           src="/clothing.mp4"
         ></video>
         <Image
-          src='/mobile.avif'
+          src='/mobile2.avif'
           className="block tablet:hidden"
           alt="img"
           placeholder="blur"
