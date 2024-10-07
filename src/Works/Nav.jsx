@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const Raleway = RalewayFont({
-  weight: ["100", "200", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"], // Remove extremely light and heavy weights
   subsets: ["latin"],
 });
 
@@ -19,7 +19,6 @@ const navLinks = [
 
 function Nav() {
   const pathname = usePathname();
-  console.log(pathname); // Log current pathname for debugging
 
   return (
     <div className="w-full flex items-center justify-between px-2 tablet:px-10 h-[3rem] laptop:h-[4rem] tablet:h-[4rem] bg-white fixed border-b-2 top-0 left-0 z-10">
@@ -42,7 +41,7 @@ function Nav() {
         {navLinks.map((link) => (
           <Link key={link.path} href={link.path}>
             <p
-              className={`hover:font-semibold transition-all duration-150 hover:text-orange-600 cursor-pointer 
+              className={`transition-colors duration-150 hover:text-orange-600 cursor-pointer 
               ${pathname === link.path ? "text-orange-600 font-semibold" : ""}`}
             >
               {link.name}

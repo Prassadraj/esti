@@ -1,6 +1,7 @@
 import Nav from "@/Works/Nav";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Estilo",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={montserrat.className}>
         <Nav />
         <div className="tablet:mt-16 mt-12">{children}</div>
+        <Footer />
       </body>
     </html>
   );
