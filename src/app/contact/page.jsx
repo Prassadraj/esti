@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { faRocketchat } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./contact.css";
+import Image from "next/image";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -55,6 +56,13 @@ function Contact() {
         <source src="/clothing.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> */}
+      <Image
+        src="/contactus2.jpg"
+        alt="Contact Us Background"
+        quality={100}
+        fill
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      />
 
       {messageLoading && (
         <div className="fixed top-0 left-0 h-screen w-full bg-black/50 z-50">
@@ -63,7 +71,6 @@ function Contact() {
           </div>
         </div>
       )}
-
       <div className="relative z-10">
         <p className="font-bold text-white text-lg tablet:text-3xl font-poppins">
           {`     Let's Get in Touch`}
@@ -73,7 +80,6 @@ function Contact() {
           us and we'll respond as soon as we can.`}
         </p>
       </div>
-
       {/* Form Section */}
       <div className="relative z-10">
         <form
@@ -85,7 +91,7 @@ function Contact() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full h-[7vh] outline-none text-xl p-3 rounded-lg text-white bg-transparent border border-white placeholder:text-white"
+            className="w-full h-[7vh] outline-none text-xl p-3 rounded-lg text-black bg-white/80 border border-white placeholder:text-black"
             placeholder="Name"
             required
           />
@@ -94,7 +100,7 @@ function Contact() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full h-[7vh] outline-none text-xl p-3 rounded-lg text-white bg-transparent border border-white placeholder:text-white"
+            className="w-full h-[7vh] outline-none text-xl p-3 rounded-lg text-black bg-white/80 border border-white placeholder:text-black"
             placeholder="Email Address"
             required
           />
@@ -103,7 +109,7 @@ function Contact() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full h-[7vh] outline-none text-xl p-3 rounded-lg text-white bg-transparent border border-white placeholder:text-white"
+            className="w-full h-[7vh] outline-none text-xl p-3 rounded-lg text-black bg-white/80 border border-white placeholder:text-black"
             placeholder="Phone Number"
             required
           />
@@ -112,7 +118,7 @@ function Contact() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Have anything to say..."
-            className="placeholder:text-white h-[20vh] w-full pt-2 tablet:text-xl box-border outline-none p-3 rounded-lg text-white bg-transparent border border-white"
+            className=" h-[20vh] w-full pt-2 tablet:text-xl box-border outline-none p-3 rounded-lg text-black bg-white/80 border border-white placeholder:text-black"
             required
           ></textarea>
           <div className="flex items-center justify-center">
