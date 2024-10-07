@@ -21,7 +21,7 @@ function Nav() {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex items-center justify-between px-2 tablet:px-10 h-[3rem] laptop:h-[4rem] tablet:h-[4rem] bg-white fixed border-b-2 top-0 left-0 z-10">
+    <div className="w-full flex items-center justify-between px-2 tablet:px-10 h-[3rem] laptop:h-[4rem] tablet:h-[4rem] bg-white fixed border-b-2 top-0 left-0 z-40">
       <div>
         <Link href="/">
           <Image
