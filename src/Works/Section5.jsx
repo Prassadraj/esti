@@ -22,8 +22,8 @@ function Section5() {
   ];
 
   return (
-    <>
-      <div className="laptop:h-[10rem] pt-5 tablet:pt-0 justify-end items-center flex flex-col gap-3 w-full">
+    <div className="h-screen flex justify-center flex-col">
+      <div className="pt-5 tablet:pt-0 justify-end items-center flex flex-col gap-3 w-full">
         <p className="text-center text-base font-medium tablet:font-normal laptop:text-4xl">
           Estilo Services
         </p>
@@ -52,7 +52,7 @@ function Section5() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
