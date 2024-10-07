@@ -12,6 +12,7 @@ const Raleway = RalewayFont({
 
 const navLinks = [
   { name: "About", path: "/about" },
+  { name: "Business Opportunities", path: "/business" },
   { name: "Excess Inventory", path: "/inventory" },
   { name: "Find a Store", path: "/store" },
   { name: "Contact", path: "/contact" },

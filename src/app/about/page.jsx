@@ -33,7 +33,7 @@ function About() {
       >
         {"Our Story".split("").map((work, i) => (
           <p
-            className={` text-[10vw]  tablet:text-[25px] font-light`}
+            className={` text-[10vw]  tablet:text-[25px] font-normal`}
             montserrat
             key={i}
           >
@@ -45,7 +45,7 @@ function About() {
         initial={{ opacity: 0, y: 20 }} // Start with opacity 0
         animate={{ opacity: 1, y: 0 }} // Animate to opacity 1
         transition={{ duration: 1, delay: 1 }}
-        className={`flex flex-col gap-5 tablet:px-5 px-3 font-normal ${font.className}`}
+        className={`flex flex-col gap-5 tablet:px-1 px-3 font-normal ${font.className}`}
       >
         <p>
           {" "}
