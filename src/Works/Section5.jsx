@@ -22,7 +22,7 @@ function Section5() {
   ];
 
   return (
-    <div className="h-screen flex justify-center flex-col">
+    <div className="laptop:h-screen h-full flex justify-center flex-col">
       <div className="pt-5 tablet:pt-0 justify-end items-center flex flex-col gap-3 w-full">
         <p className="text-center text-base font-medium tablet:font-normal laptop:text-4xl">
           Estilo Services
