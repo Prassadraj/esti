@@ -73,23 +73,23 @@ const Section2 = ({ scrollYProgress }) => {
     {
       img: "/wo1.jpg",
       title: "Travel Stamp Flower T-Shirt ",
-      price: 999,
+      //   // price: 999,
     },
     {
       img: "/wo2.jpg",
       title: " Neverfull Bandoulière Inside Out BB",
-      price: 999,
+      // price: 999,
     },
     {
       img: "/wo3.jpg",
       title: "LV Medallion Scarf",
-      price: 999,
+      // price: 999,
     },
 
     {
       img: "/wo4.jpg",
-      title: "Bella",
-      price: 999,
+      title: " T-Shirt",
+      // price: 999,
     },
   ];
   return (
@@ -129,12 +129,12 @@ const Section2 = ({ scrollYProgress }) => {
               >
                 {data.title}
               </p>
-              <p
+              {/* <p
                 className="text-xs
               max-w-md text-left"
               >
                 ₹{data.price}
-              </p>
+              </p> */}
             </div>
           </div>
         ))}

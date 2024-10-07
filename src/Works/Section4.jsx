@@ -52,7 +52,7 @@ function Section1({ scrollYProgress }) {
           src="/clothing.mp4"
         ></video>
         <Image
-          src='/mobile2.avif'
+          src="/mobile2.avif"
           className="block tablet:hidden"
           alt="img"
           placeholder="blur"
@@ -68,23 +68,23 @@ function Section2({ scrollYProgress }) {
     {
       img: "/men1.jpg",
       title: "Only LV Mini Comfy Scarf",
-      price: 999,
+      // price: 999,
     },
     {
       img: "/men2.jpg",
       title: "Monogram Short-Sleeved Cotton Crewneck",
-      price: 999,
+      // price: 999,
     },
     {
       img: "/men3.jpg",
       title: "LV Gradient Bracelet",
-      price: 999,
+      // price: 999,
     },
 
     {
       img: "/men4.jpg",
       title: "Multiple Wallet",
-      price: 999,
+      // price: 999,
     },
   ];
   const scale = useTransform(scrollYProgress, [0, 0.8], [0.8, 1]);
@@ -129,12 +129,12 @@ function Section2({ scrollYProgress }) {
                 >
                   {data.title}
                 </p>
-                <p
+                {/* <p
                   className="text-xs
               max-w-md text-left"
                 >
                   ₹{data.price}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}

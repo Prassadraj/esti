@@ -29,18 +29,22 @@ function About() {
     <div className=" tablet:px-10 px-2 laptop:mb-10">
       <header
         className="font-poppins flex letters overflow-hidden"
-        style={{ clippath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+        style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
       >
-        {"Our Story".split("").map((work, i) => (
+        {"Our Story".split("").map((letter, i) => (
           <p
-            className={` text-[10vw]  tablet:text-[25px] font-normal`}
-            montserrat
+            className={`text-[10vw] tablet:text-[25px] font-normal`}
+            style={{
+              letterSpacing: "0.05em",
+              margin: letter === " " ? "0.1em" : "0",
+            }} // Adds spacing between words
             key={i}
           >
-            {work}
+            {letter}
           </p>
         ))}
       </header>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }} // Start with opacity 0
         animate={{ opacity: 1, y: 0 }} // Animate to opacity 1
