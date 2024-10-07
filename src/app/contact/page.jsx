@@ -46,7 +46,7 @@ function Contact() {
   return (
     <div className="relative p-4 laptop:p-5 laptop:h-screen bg-black  tablet:flex gap-20 justify-center items-center">
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -54,7 +54,7 @@ function Contact() {
       >
         <source src="/clothing.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
 
       {messageLoading && (
         <div className="fixed top-0 left-0 h-screen w-full bg-black/50 z-50">

@@ -6,7 +6,7 @@ import { delay, motion } from "framer-motion";
 import { Poppins, Raleway } from "next/font/google";
 
 gsap.registerPlugin(ScrollTrigger);
-const font = Poppins({
+const font = Raleway({
   weight: ["400", "100", "200", "900", "500", "600", "800", "700"], // Choose the weights you need
   subsets: ["latin"], // Specify the subsets
 });
@@ -33,7 +33,7 @@ function About() {
       >
         {"Our Story".split("").map((work, i) => (
           <p
-            className={`font-light text-[10vw]  tablet:text-[50px]`}
+            className={` text-[10vw]  tablet:text-[25px] font-light`}
             montserrat
             key={i}
           >
@@ -45,7 +45,7 @@ function About() {
         initial={{ opacity: 0, y: 20 }} // Start with opacity 0
         animate={{ opacity: 1, y: 0 }} // Animate to opacity 1
         transition={{ duration: 1, delay: 1 }}
-        className={`flex flex-col gap-5 tablet:px-5 px-3 ${font.className}`}
+        className={`flex flex-col gap-5 tablet:px-5 px-3 font-normal ${font.className}`}
       >
         <p>
           {" "}
