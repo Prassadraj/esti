@@ -66,11 +66,11 @@ function Contact() {
 
       <div className="relative z-10">
         <p className="font-bold text-white text-lg tablet:text-3xl font-poppins">
-          Let's Get in Touch
+          {`     Let's Get in Touch`}
         </p>
         <p className="tablet:text-xl text-white mt-2 mb-2 text-left max-w-lg">
-          We're here to assist you with any questions or concerns. Reach out to
-          us and we'll respond as soon as we can.
+          {` We're here to assist you with any questions or concerns. Reach out to
+          us and we'll respond as soon as we can.`}
         </p>
       </div>
 
