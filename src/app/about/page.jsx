@@ -26,7 +26,7 @@ function About() {
     });
   }, []);
   return (
-    <div className=" tablet:px-10 px-2">
+    <div className=" tablet:px-10 px-2 laptop:mb-10">
       <header
         className="font-poppins flex letters overflow-hidden"
         style={{ clippath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}

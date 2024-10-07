@@ -14,7 +14,7 @@ function Footer() {
   ];
   return (
     <div
-      className={`h-fit bg-gray-300 w-full py-10 gap-4  mt-10 tablet:gap-5 flex flex-col items-center ${font.className}`}
+      className={`h-fit bg-gray-300 w-full py-10 gap-4 tablet:gap-5 flex flex-col items-center ${font.className}`}
     >
       <div className="laptop:text-2xl">
         {" "}
