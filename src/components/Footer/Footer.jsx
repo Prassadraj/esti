@@ -8,10 +8,12 @@ const font = Raleway({
 function Footer() {
   const navLinks = [
     { name: "About", path: "/about" },
+    { name: "Business Opportunities", path: "/business" },
     { name: "Excess Inventory", path: "/inventory" },
     { name: "Find a Store", path: "/store" },
     { name: "Contact", path: "/contact" },
   ];
+
   return (
     <div
       className={`h-fit bg-gray-300 w-full py-10 gap-4 tablet:gap-5 flex flex-col items-center ${font.className}`}
@@ -21,7 +23,7 @@ function Footer() {
         <Link href="#">Follow us on Instagram</Link>
       </div>
       <div className="h-[1px] w-[80%] bg-black"></div>
-      <div className="flex tablet:gap-10 gap-4 text-xs tablet:text-lg font-medium">
+      <div className="tablet:flex tablet:gap-10 grid-cols-3 grid gap-1 px-2 text-xs tablet:text-lg font-medium">
         {navLinks.map((link) => (
           <Link key={link.path} href={link.path}>
             <p className="hover:scale-105 hover:text-orange-900 cursor-pointer transition-all duration-500">
