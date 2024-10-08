@@ -42,7 +42,7 @@ function Section1() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="flex items-end pb-20 justify-center h-full">
+          <div className="flex items-end tablet:pb-20 pb-32 justify-center h-full">
             <div className="flex flex-col items-center">
               <p
                 className={`tablet:font-semibold font-medium tablet:text-4xl text-white capitalize`}
