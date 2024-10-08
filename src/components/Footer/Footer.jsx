@@ -1,3 +1,4 @@
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Raleway } from "next/font/google";
 import Link from "next/link";
 import React from "react";
@@ -18,9 +19,22 @@ function Footer() {
     <div
       className={`h-fit bg-gray-300 w-full py-10 gap-4 tablet:gap-5 flex flex-col items-center ${font.className}`}
     >
-      <div className="laptop:text-2xl">
-        {" "}
-        <Link href="#">Follow us on Instagram</Link>
+      <div className="flex gap-3">
+        <Link target="_blank" href="https://www.instagram.com/gabinovida/">
+          <FaInstagram className="text-4xl text-red-700" />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://www.youtube.com/@gabinovidagv/shorts"
+        >
+          <FaYoutube className="text-4xl text-red-600" />
+        </Link>
+        <Link href="#">
+          <FaFacebook className="text-4xl text-blue-700" />
+        </Link>
+        <Link target="_blank" href="https://wa.me/7358033233">
+          <FaWhatsapp className="text-4xl text-green-600" />
+        </Link>
       </div>
       <div className="h-[1px] w-[80%] bg-black"></div>
       <div className="tablet:flex tablet:gap-10 grid-cols-3 grid gap-1 px-2 text-xs tablet:text-lg font-medium">

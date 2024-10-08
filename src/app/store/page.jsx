@@ -26,7 +26,7 @@ function Store() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="laptop:mb-10">
+    <div className=" h-screen">
       <div className="tablet:px-10 px-2 tablet:py-5 py-3 text-center laptop:text-left">
         <p className="laptop:text-xl font-semibold text-sm laptop:font-semibold">
           Discover Your Next Shopping Destination
