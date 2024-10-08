@@ -114,7 +114,7 @@ function Section2({ scrollYProgress }) {
               </div>
             </Tilt>
             <div className="tablet:py-3 py-2 h-10">
-              <p className="text-xs max-w-md tablet:text-xs text-left">
+              <p className="text-xs max-w-md tablet:text-xs laptop:text-sm text-left">
                 {item.title}
               </p>
             </div>
