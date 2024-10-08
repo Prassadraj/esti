@@ -2,7 +2,7 @@
 
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 const data = [
   {
     img: "/girl.jpg",
@@ -37,7 +37,11 @@ const data = [
     title: ` Small Leather Goods`,
   },
 ];
+const SkeletonLoader = () => (
+  <div className="animate-pulse bg-gray-300 w-full h-full"></div>
+);
 function Section2() {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <div className="h-fit w-full laptop:px-16 px-2">
       <div className="flex justify-center items-center w-full tablet:h-[10rem] h-[6rem]">
@@ -57,15 +61,17 @@ function Section2() {
               transitionSpeed={500}
             >
               <div
-                className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[180px] tablet:w-[180px] 
+                className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
               w-[120px] h-[180px]"
               >
+                {isLoading && <SkeletonLoader />}
                 <Image
                   src={item.img}
                   className="object-cover h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                   fill
                   priority
                   quality={100}
+                  onLoadingComplete={() => setIsLoading(false)}
                   alt={item.title} // Added alt prop
                 />
               </div>

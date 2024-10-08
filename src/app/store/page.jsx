@@ -1,7 +1,9 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 
 function Store() {
+  const [loading, setLoading] = useState(true);
+
   const data = useMemo(
     () => [
       {
@@ -23,35 +25,50 @@ function Store() {
     []
   );
 
-  const [loading, setLoading] = useState(true);
+  // Simulate loading time
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500); // Adjust time as needed
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   return (
-    <div className=" h-screen">
+    <div className="h-screen">
       <div className="tablet:px-10 px-2 tablet:py-5 py-3 text-center laptop:text-left">
         <p className="laptop:text-xl font-semibold text-sm laptop:font-semibold">
           Discover Your Next Shopping Destination
         </p>
       </div>
       <div className="laptop:h-[400px] w-full flex flex-col tablet:flex-row gap-2 overflow-hidden px-5">
-        {data.map((location, i) => (
-          <div key={i} className="flex-1 p-5">
-            <iframe
-              className="w-full laptop:h-[300px]"
-              src={location.map}
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              onLoad={() => setLoading(false)} // Optional loading state
-            ></iframe>
-            <div className="h-full mt-2">
-              <p className="font-semibold text-sm">{location.title}</p>
-              <p className="text-xs">{location.info}</p>
-            </div>
-          </div>
-        ))}
+        {loading
+          ? // Skeleton Loader
+            Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="flex-1 p-5 animate-pulse">
+                <div className="h-[300px] bg-gray-200 rounded-lg"></div>
+                <div className="h-6 mt-2 bg-gray-200 rounded w-3/4"></div>
+                <div className="h-4 mt-1 bg-gray-200 rounded w-1/2"></div>
+              </div>
+            ))
+          : // Actual Content
+            data.map((location, i) => (
+              <div key={i} className="flex-1 p-5">
+                <iframe
+                  className="w-full laptop:h-[300px]"
+                  src={location.map}
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <div className="h-full mt-2">
+                  <p className="font-semibold text-sm">{location.title}</p>
+                  <p className="text-xs">{location.info}</p>
+                </div>
+              </div>
+            ))}
       </div>
-      {loading && <p className="text-white text-center">Loading maps...</p>}
     </div>
   );
 }
