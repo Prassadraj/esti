@@ -108,16 +108,13 @@ const ProductCard = ({ data }) => {
         scale={1.05}
         transitionSpeed={500}
       >
-        <div
-          className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] 
-              w-[120px] h-[180px]"
-        >
+        <div className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] h-[330px] w-[180px] relative">
           {isLoading && <SkeletonLoader />} {/* Show skeleton while loading */}
           <Image
             src={data.img}
             className={`object-cover h-full w-full transition-all ease-in-out duration-700 ${
               isLoading ? "hidden" : "block"
-            }`} // Hide image until it's loaded
+            }`}
             fill
             quality={100}
             priority
@@ -127,7 +124,7 @@ const ProductCard = ({ data }) => {
         </div>
       </Tilt>
       <div className="tablet:py-3 py-2 h-10">
-        <p className="text-xs max-w-md tablet:text-sm text-left">
+        <p className="text-xs text-max-w-md w-full tablet:text-sm text-left">
           {data.title}
         </p>
       </div>

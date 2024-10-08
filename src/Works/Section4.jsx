@@ -97,12 +97,7 @@ function Section2({ scrollYProgress }) {
               scale={1.05}
               transitionSpeed={500}
             >
-              <div
-                className="shadow-md bg-gradient-to-br
-                  from-black/20 via-gray-100 to-white overflow-hidden 
-                  laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] 
-                  w-[120px] h-[180px]"
-              >
+              <div className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] h-[330px] w-[180px] relative">
                 <Image
                   src={item.img}
                   className="object-cover h-full w-full hover:scale-100 transition-transform ease-in-out duration-500"
