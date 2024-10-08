@@ -108,7 +108,8 @@ const ProductCard = ({ data }) => {
         scale={1.05}
         transitionSpeed={500}
       >
-        <div className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] h-[330px] w-[180px] relative">
+        <div className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px]
+         h-[300px] w-[180px] ">
           {isLoading && <SkeletonLoader />} {/* Show skeleton while loading */}
           <Image
             src={data.img}
