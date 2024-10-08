@@ -21,19 +21,19 @@ function Footer() {
     >
       <div className="flex gap-3">
         <Link target="_blank" href="https://www.instagram.com/gabinovida/">
-          <FaInstagram className="text-4xl text-red-700" />
+          <FaInstagram className="laptop:text-4xl text-2xl text-red-700" />
         </Link>
         <Link
           target="_blank"
           href="https://www.youtube.com/@gabinovidagv/shorts"
         >
-          <FaYoutube className="text-4xl text-red-600" />
+          <FaYoutube className="laptop:text-4xl text-2xl text-red-600" />
         </Link>
         <Link href="#">
-          <FaFacebook className="text-4xl text-blue-700" />
+          <FaFacebook className="laptop:text-4xl text-2xl text-blue-700" />
         </Link>
         <Link target="_blank" href="https://wa.me/7358033233">
-          <FaWhatsapp className="text-4xl text-green-600" />
+          <FaWhatsapp className="laptop:text-4xl text-2xl text-green-600" />
         </Link>
       </div>
       <div className="h-[1px] w-[80%] bg-black"></div>
