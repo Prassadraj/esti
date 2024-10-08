@@ -84,7 +84,7 @@ function Section2({ scrollYProgress }) {
   return (
     <motion.div style={{ scale, rotate }} className="relative h-screen">
       <div
-        className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-2 bg-white place-items-center
+        className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 bg-white place-items-center
           h-full laptop:gap-10 p-2 tablet:pt-28 tablet:px-5 laptop:px-10"
       >
         {data.map((item, index) => (
@@ -97,7 +97,10 @@ function Section2({ scrollYProgress }) {
               scale={1.05}
               transitionSpeed={500}
             >
-              <div className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] h-[300px] w-[180px] ">
+              <div
+                className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] 
+              h-[40vh] w-[180px] "
+              >
                 <Image
                   src={item.img}
                   className="object-cover h-full w-full hover:scale-100 transition-transform ease-in-out duration-500"
