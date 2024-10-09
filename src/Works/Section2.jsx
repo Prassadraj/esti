@@ -21,7 +21,7 @@ const data = [
     title: `Girl's`,
   },
   {
-    img: "/w1.webp",
+    video: "/ad.mp4",
     title: `Bags`,
   },
   {
@@ -65,15 +65,26 @@ function Section2() {
               w-[120px] h-[180px]"
               >
                 {isLoading && <SkeletonLoader />}
-                <Image
-                  src={item.img}
-                  className="object-cover h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
-                  fill
-                  priority
-                  quality={100}
-                  onLoadingComplete={() => setIsLoading(false)}
-                  alt={item.title} // Added alt prop
-                />
+                {item.video ? (
+                  <video
+                    src="/ad.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    priority
+                    className="object-cover rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                  ></video>
+                ) : (
+                  <Image
+                    src={item.img}
+                    className="object-cover rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                    fill
+                    priority
+                    quality={100}
+                    onLoadingComplete={() => setIsLoading(false)}
+                    alt={item.title} // Added alt prop
+                  />
+                )}
               </div>
             </Tilt>
             <div className="tablet:py-5 py-2">

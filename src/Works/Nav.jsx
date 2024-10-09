@@ -37,7 +37,7 @@ function Nav() {
         </Link>
       </div>
       <div
-        className={`hidden tablet:flex justify-center gap-10 tablet:text-xs laptop:text-xl w-full ${Raleway.className}`}
+        className={`hidden tablet:flex justify-center gap-10 tablet:text-xs laptop:text-base font-medium w-full ${Raleway.className}`}
       >
         {navLinks.map((link) => (
           <Link key={link.path} href={link.path}>
