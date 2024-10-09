@@ -62,7 +62,7 @@ function Section2() {
             >
               <div
                 className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
-              w-[120px] h-[180px]"
+              w-[120px] h-[180px] shadow-md shadow-gray-600  rounded-md"
               >
                 {isLoading && <SkeletonLoader />}
                 {item.video ? (
@@ -72,7 +72,7 @@ function Section2() {
                     loop
                     muted
                     priority
-                    className="object-cover rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                    className="object-cover  rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                   ></video>
                 ) : (
                   <Image
