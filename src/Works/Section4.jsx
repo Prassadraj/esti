@@ -1,7 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+
+const SkeletonLoader = () => (
+  <div className="animate-pulse bg-gray-300 w-full h-full"></div>
+);
 
 function Section4() {
   const container = useRef();
@@ -50,7 +54,7 @@ function Section1({ scrollYProgress }) {
         className="block tablet:hidden"
         alt="LV Fall Collection"
         placeholder="blur"
-        blurDataURL="cxc"
+        blurDataURL="/fallback-placeholder.png" // Add valid placeholder image
         fill
         loading="lazy" // Lazy load the image
       />
@@ -88,37 +92,49 @@ function Section2({ scrollYProgress }) {
           h-full laptop:gap-10 p-2 tablet:pt-28 tablet:px-5 laptop:px-10"
       >
         {data.map((item, index) => (
-          <div key={index} className="flex flex-col mb-5">
-            <Tilt
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              glareEnable={true}
-              glareMaxOpacity={0.45}
-              scale={1.05}
-              transitionSpeed={500}
-            >
-              <div
-                className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] 
-              h-[40vh] w-[180px] "
-              >
-                <Image
-                  src={item.img}
-                  className="object-cover h-full w-full hover:scale-100 transition-transform ease-in-out duration-500"
-                  fill
-                  quality={100}
-                  alt={item.title}
-                  loading="lazy" // Lazy load images
-                />
-              </div>
-            </Tilt>
-            <div className="tablet:py-3 py-2 h-10">
-              <p className="text-xs max-w-md tablet:text-xs laptop:text-sm text-left">
-                {item.title}
-              </p>
-            </div>
-          </div>
+          <ImageCard key={index} item={item} />
         ))}
       </div>
     </motion.div>
+  );
+}
+
+function ImageCard({ item }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div className="flex flex-col mb-5">
+      <Tilt
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
+        glareEnable={true}
+        glareMaxOpacity={0.45}
+        scale={1.05}
+        transitionSpeed={500}
+      >
+        <div
+          className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] 
+              h-[40vh] w-[180px]"
+        >
+          {isLoading && <SkeletonLoader />}
+          <Image
+            src={item.img}
+            className={`object-cover h-full w-full hover:scale-100 transition-transform ease-in-out duration-500 ${
+              isLoading ? "hidden" : "block"
+            }`}
+            fill
+            quality={100}
+            alt={item.title}
+            onLoadingComplete={() => setIsLoading(false)}
+            loading="lazy" // Lazy load images
+          />
+        </div>
+      </Tilt>
+      <div className="tablet:py-3 py-2 h-10">
+        <p className="text-xs max-w-md tablet:text-xs laptop:text-sm text-left">
+          {item.title}
+        </p>
+      </div>
+    </div>
   );
 }
