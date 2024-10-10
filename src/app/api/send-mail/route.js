@@ -18,15 +18,15 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "info@estilofashions.com", // Your Gmail address
-        pass: "fzydiqivrkvnclsi", // Your generated app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     // Send the email
     const info = await transporter.sendMail({
       from: email, // Sender's email
-      to: "info@estilofashions.com", // Your email
+      to: "prassadpr111@gmail.com", // Your email
       subject: "Message from website", // Subject line
       text: message, // Plain text message
       html: `

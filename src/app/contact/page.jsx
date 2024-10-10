@@ -36,6 +36,7 @@ function Contact() {
         message: "",
       });
     } catch (error) {
+      setMessageLoading(false);
       console.error("Error sending message:", error);
       alert("Failed to send message. Please try again.");
     }
