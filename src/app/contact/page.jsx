@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { faRocketchat } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./contact.css";
@@ -26,7 +26,7 @@ function Contact() {
     setMessageLoading(true);
     try {
       const response = await axios.post(
-        "https://cpcnew.onrender.com/send-email",
+        "http://localhost:3000/api/send-mail",
         formData
       );
       console.log("Success:", response.data);
@@ -56,6 +56,7 @@ function Contact() {
         <source src="/clothing.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> */}
+
       <Image
         src="/contactus2.jpg"
         alt="Contact Us Background"
