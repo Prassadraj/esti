@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+export async function GET(req) {
+  try {
+    return NextResponse.json({ message: "gwt" });
+  } catch (error) {
+    return NextResponse.json({ error: "wewe" });
+  }
+}
+
 export async function POST(req) {
   try {
     const body = await req.json(); // Parse the JSON body from the request
@@ -40,3 +48,6 @@ export async function POST(req) {
     );
   }
 }
+
+// user: "info@estilofashions.com", // Your Gmail address
+// pass: "fzydiqivrkvnclsi", // Your generated app password

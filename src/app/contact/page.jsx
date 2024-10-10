@@ -25,10 +25,7 @@ function Contact() {
     e.preventDefault();
     setMessageLoading(true);
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/send-mail",
-        formData
-      );
+      const response = await axios.post("/api/send-mail", formData);
       console.log("Success:", response.data);
       setMessageLoading(false);
       toast.success("SuccessFully Message Sent");
