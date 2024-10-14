@@ -114,19 +114,22 @@ function ImageCard({ item }) {
       >
         <div
           className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px] 
-              h-[40vh] w-[180px]"
+              h-[40vh] w-[180px] relative"
         >
+          {/* Skeleton loader displayed until image loads */}
           {isLoading && <SkeletonLoader />}
+
+          {/* Image with onLoadingComplete callback to hide loader */}
           <Image
             src={item.img}
-            className={`object-cover h-full w-full hover:scale-100 transition-transform ease-in-out duration-500 ${
+            className={`object-cover h-full w-full transition-transform ease-in-out duration-500 ${
               isLoading ? "hidden" : "block"
             }`}
             fill
             quality={100}
+            priority
             alt={item.title}
             onLoadingComplete={() => setIsLoading(false)}
-            loading="lazy" // Lazy load images
           />
         </div>
       </Tilt>
