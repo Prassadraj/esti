@@ -21,20 +21,20 @@ const data = [
     title: `Girl's`,
   },
   {
-    video: "/ad.mp4",
-    title: `Bags`,
+    video: "/ad/ad6.mp4",
+    // title: `Bags`,
   },
   {
-    img: "/w2.webp",
-    title: `Leather Goods`,
+    video: "/ad/ad2.mp4",
+    // title: `Leather Goods`,
   },
   {
-    img: "/w3.webp",
-    title: `Shoes`,
+    video: "/ad/ad3.mp4",
+    // title: `Shoes`,
   },
   {
-    img: "/w4.webp",
-    title: ` Small Leather Goods`,
+    video: "/ad/ad4.mp4",
+    // title: ` Small Leather Goods`,
   },
 ];
 const SkeletonLoader = () => (
@@ -67,7 +67,7 @@ function Section2() {
                 {isLoading && <SkeletonLoader />}
                 {item.video ? (
                   <video
-                    src="/ad.mp4"
+                    src={item.video}
                     autoPlay
                     loop
                     muted
