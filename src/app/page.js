@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import Section4 from "@/Works/Section4";
 import Section5 from "@/Works/Section5";
+import Extra from "@/Works/Extra";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -24,6 +25,7 @@ export default function Home() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Extra />
       <Section5 />
     </div>
   );
