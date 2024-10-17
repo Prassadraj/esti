@@ -11,3 +11,9 @@
 body {
   color: "white";
 }
+@media (max-width: 640px) {
+  .no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
+}

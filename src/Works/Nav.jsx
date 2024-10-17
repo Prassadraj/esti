@@ -6,7 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState, useContext } from "react";
 import { BtnContext } from "@/context/MobileBtn"; // Import your context
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Import social icons
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa"; // Import social icons
 
 const Raleway = RalewayFont({
   weight: ["400", "500", "600", "700"],
@@ -39,7 +45,7 @@ function Nav() {
   }, [showMobileMenu]);
 
   return (
-    <div className="w-full flex items-center justify-between px-2 tablet:px-10 h-[3rem] bg-white fixed border-b-2 top-0 left-0 z-40">
+    <div className="w-full flex items-center justify-between px-2 tablet:px-10 h-[4rem] bg-white fixed border-b-2 top-0 left-0 z-40">
       <div>
         <Link href="/">
           <Image
@@ -65,7 +71,8 @@ function Nav() {
       </div>
 
       <div
-        className={`hidden tablet:flex justify-center gap-10 tablet:text-xs laptop:text-base font-medium w-full ${Raleway.className}`}
+        className={`hidden tablet:flex justify-center gap-10 tablet:text-xs laptop:text-base font-medium w-full
+           ${Raleway.className}`}
       >
         {navLinks.map((link) => (
           <Link key={link.path} href={link.path}>
@@ -84,7 +91,7 @@ function Nav() {
       <div
         className={`${
           showMobileMenu ? "flex" : "hidden"
-        } flex-col md:hidden bg-white absolute top-10 left-0 w-full px-4 py-1 shadow-md border-t-2 h-screen font-lato`}
+        } flex-col md:hidden bg-white absolute top-14 left-0 w-full inset-0 px-4 py-1 shadow-md border-t-2 h-screen font-lato`}
       >
         <div className="h-96 overflow-y-scroll border-b-2 flex flex-col gap-1">
           <Link
@@ -96,6 +103,16 @@ function Nav() {
             }}
           >
             Home
+          </Link>
+          <Link
+            className="text-xl font-semibold py-2"
+            href="/about"
+            onClick={() => {
+              setShowMobileMenu(!showMobileMenu);
+              setIsToggled((e) => !e);
+            }}
+          >
+            About
           </Link>
           <Link
             className="text-xl font-semibold py-2"
@@ -139,28 +156,22 @@ function Nav() {
             Contact
           </Link>
         </div>
-        <div className="flex justify-evenly mt-4">
-          <a
-            href="https://facebook.com"
+        <div className="flex gap-3 justify-evenly mt-2">
+          <Link target="_blank" href="https://www.instagram.com/gabinovida/">
+            <FaInstagram className="laptop:text-4xl text-4xl text-red-700" />
+          </Link>
+          <Link
             target="_blank"
-            rel="noopener noreferrer"
+            href="https://www.youtube.com/@gabinovidagv/shorts"
           >
-            <FaFacebook size={24} />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={24} />
-          </a>
+            <FaYoutube className="laptop:text-4xl text-4xl text-red-600" />
+          </Link>
+          <Link href="#">
+            <FaFacebook className="laptop:text-4xl text-4xl text-blue-700" />
+          </Link>
+          <Link target="_blank" href="https://wa.me/7358033233">
+            <FaWhatsapp className="laptop:text-4xl text-4xl text-green-600" />
+          </Link>
         </div>
       </div>
     </div>

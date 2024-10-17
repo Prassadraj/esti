@@ -26,14 +26,14 @@ function About() {
     });
   }, []);
   return (
-    <div className=" tablet:px-10 px-2 laptop:mb-10">
+    <div className="tablet:h-screen h-fit py-5 tablet:px-10 px-2 ">
       <header
         className="font-poppins flex letters overflow-hidden"
         style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
       >
         {"Our Story".split("").map((letter, i) => (
           <p
-            className={`text-[10vw] tablet:text-[25px] font-normal`}
+            className={`text-[7vw] tablet:text-[25px] font-normal`}
             style={{
               letterSpacing: "0.05em",
               margin: letter === " " ? "0.1em" : "0",
