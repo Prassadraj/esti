@@ -35,7 +35,7 @@ export default function Home() {
 const Section1 = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
-
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <motion.div
       style={{ scale, rotate }}
@@ -50,13 +50,15 @@ const Section1 = ({ scrollYProgress }) => {
         preload="metadata" // Preload only metadata
         loading="lazy" // Lazy load the video
       ></video>
+      {isLoading && <SkeletonLoader />}
       <Image
         src="/mobile1.avif"
-        alt="img"
-        placeholder="blur"
-        blurDataURL="cxc"
-        className="block tablet:hidden"
         fill
+        quality={100}
+        priority
+        alt="image"
+        onLoadingComplete={() => setIsLoading(false)}
+        className={`block tablet:hidden ${isLoading ? "hidden" : "block"}`}
       />
     </motion.div>
   );
@@ -112,7 +114,7 @@ const ProductCard = ({ data }) => {
       >
         <div
           className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px]
-         h-[40vh] w-[180px] relative"
+         h-[40vh] w-[170px] relative"
         >
           {isLoading && <SkeletonLoader />} {/* Show skeleton while loading */}
           <Image

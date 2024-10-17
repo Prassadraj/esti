@@ -33,7 +33,7 @@ export default Section4;
 function Section1({ scrollYProgress }) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 5]);
-
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <motion.div
       style={{ scale, rotate }}
@@ -49,14 +49,14 @@ function Section1({ scrollYProgress }) {
       ></video>
 
       {/* Fallback image for mobile devices */}
+      {isLoading && <SkeletonLoader />}
       <Image
         src="/mobile2.avif"
-        className="block tablet:hidden"
+        onLoadingComplete={() => setIsLoading(false)}
+        className={`block tablet:hidden ${isLoading ? "hidden" : "block"}`}
         alt="LV Fall Collection"
-        placeholder="blur"
-        blurDataURL="/fallback-placeholder.png" // Add valid placeholder image
         fill
-        loading="lazy" // Lazy load the image
+        priority // Lazy load the image
       />
     </motion.div>
   );

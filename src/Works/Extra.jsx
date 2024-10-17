@@ -43,12 +43,12 @@ function Extra() {
     <div className="h-fit w-full laptop:px-16 px-2">
       <div className="flex justify-center items-center w-full tablet:h-[10rem] h-[6rem]">
         <p
-          className={`tablet:text-4xl text-sm font-normal text-center ${montserrat.className}`}
+          className={`tablet:text-4xl text-sm font-semibold laptop:font-normal text-center ${montserrat.className}`}
         >
           {`Sharp Looks for Modern Men`}
         </p>
       </div>
-      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 laptop:gap-10">
+      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-5 laptop:gap-10">
         {data.map((item, i) => (
           <div key={i} className="flex items-center flex-col mb-5">
             <Tilt
@@ -61,7 +61,7 @@ function Extra() {
             >
               <div
                 className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
-                w-[180px] h-[40vh] shadow-md shadow-gray-600 rounded-md"
+                w-[170px] h-[40vh] shadow-md shadow-gray-600 rounded-md"
               >
                 {loadingStates[i] && <SkeletonLoader />}
                 <video

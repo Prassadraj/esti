@@ -53,7 +53,7 @@ function Section2() {
           {`Explore a Selection of the Maison's Creations`}
         </p>
       </div>
-      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 laptop:gap-10">
+      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-5 laptop:gap-10">
         {data.map((item, i) => (
           <div key={i} className="flex items-center flex-col mb-5">
             <Tilt
@@ -66,7 +66,7 @@ function Section2() {
             >
               <div
                 className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
-                w-[180px] h-[40vh] shadow-md shadow-gray-600 rounded-md"
+                w-[170px] h-[40vh] shadow-md shadow-gray-600 rounded-md"
               >
                 {isLoading && <SkeletonLoader />}
                 {item.video ? (
