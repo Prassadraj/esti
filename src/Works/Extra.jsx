@@ -2,6 +2,7 @@
 
 import Tilt from "react-parallax-tilt";
 import React, { useEffect, useState } from "react";
+import { Montserrat } from "next/font/google";
 
 const data = [
   {
@@ -25,7 +26,10 @@ const data = [
 const SkeletonLoader = () => (
   <div className="animate-pulse bg-gray-300 w-full h-full"></div>
 );
-
+const montserrat = Montserrat({
+  weight: ["400", "100", "200", "900", "500", "600", "800", "700"], // Choose the weights you need
+  subsets: ["latin"], // Specify the subsets
+});
 function Extra() {
   // Initialize an array for loading states based on the number of videos
   const [loadingStates, setLoadingStates] = useState(true);
@@ -38,7 +42,9 @@ function Extra() {
   return (
     <div className="h-fit w-full laptop:px-16 px-2">
       <div className="flex justify-center items-center w-full tablet:h-[10rem] h-[6rem]">
-        <p className="tablet:text-4xl text-sm font-medium text-center">
+        <p
+          className={`tablet:text-4xl text-sm font-normal text-center ${montserrat.className}`}
+        >
           {`Sharp Looks for Modern Men`}
         </p>
       </div>
@@ -63,6 +69,8 @@ function Extra() {
                   autoPlay
                   loop
                   muted
+                  preload="metadata" // Preload only metadata
+                  loading="lazy" // Lazy load the video
                   className="object-cover rounded-md h-full w-full transition-all ease-in-out duration-700"
                 ></video>
               </div>

@@ -1,8 +1,9 @@
-"use client"; // This marks the file as a client component
+"use client"; // Marks the file as a client component
 
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import React, { useState } from "react";
+
 const data = [
   {
     img: "/girl.jpg",
@@ -34,19 +35,22 @@ const data = [
   },
   {
     video: "/ad/ad4.mp4",
-    // title: ` Small Leather Goods`,
+    // title: `Small Leather Goods`,
   },
 ];
+
 const SkeletonLoader = () => (
   <div className="animate-pulse bg-gray-300 w-full h-full"></div>
 );
+
 function Section2() {
   const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="h-fit w-full laptop:px-16 px-2">
       <div className="flex justify-center items-center w-full tablet:h-[10rem] h-[6rem]">
         <p className="tablet:text-4xl text-sm font-medium text-center ">
-          {` Explore a Selection of the Maison's Creations`}
+          {`Explore a Selection of the Maison's Creations`}
         </p>
       </div>
       <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 laptop:gap-10">
@@ -62,7 +66,7 @@ function Section2() {
             >
               <div
                 className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
-             w-[180px] h-[40vh] shadow-md shadow-gray-600  rounded-md"
+                w-[180px] h-[40vh] shadow-md shadow-gray-600 rounded-md"
               >
                 {isLoading && <SkeletonLoader />}
                 {item.video ? (
@@ -71,17 +75,19 @@ function Section2() {
                     autoPlay
                     loop
                     muted
-                    className="object-cover  rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
+                    preload="metadata" // Preload only metadata
+                    loading="lazy" // Lazy load the video
+                    className="object-cover rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                   ></video>
                 ) : (
                   <Image
                     src={item.img}
                     className="object-cover rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                     fill
-                    priority
                     quality={100}
+                    loading="lazy" // Lazy load the images
                     onLoadingComplete={() => setIsLoading(false)}
-                    alt={item.title} // Added alt prop
+                    alt={item.title}
                   />
                 )}
               </div>
@@ -99,4 +105,3 @@ function Section2() {
 }
 
 export default Section2;
-// fzyd iqiv rkvn clsi

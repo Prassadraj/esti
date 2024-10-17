@@ -47,6 +47,8 @@ const Section1 = ({ scrollYProgress }) => {
         autoPlay
         muted
         loop
+        preload="metadata" // Preload only metadata
+        loading="lazy" // Lazy load the video
       ></video>
       <Image
         src="/mobile1.avif"
