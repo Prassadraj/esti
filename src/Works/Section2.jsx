@@ -49,7 +49,7 @@ function Section2() {
           {` Explore a Selection of the Maison's Creations`}
         </p>
       </div>
-      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-1 laptop:gap-10">
+      <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 laptop:gap-10">
         {data.map((item, i) => (
           <div key={i} className="flex items-center flex-col mb-5">
             <Tilt
@@ -71,7 +71,6 @@ function Section2() {
                     autoPlay
                     loop
                     muted
-                    priority
                     className="object-cover  rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                   ></video>
                 ) : (
