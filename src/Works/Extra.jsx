@@ -4,22 +4,6 @@ import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import React, { useState } from "react";
 const data = [
-  //   {
-  //     video: "/ad/ad6.mp4",
-  //     // title: `Bags`,
-  //   },
-  //   {
-  //     video: "/ad/ad2.mp4",
-  //     // title: `Leather Goods`,
-  //   },
-  //   {
-  //     video: "/ad/ad3.mp4",
-  //     // title: `Shoes`,
-  //   },
-  //   {
-  //     video: "/ad/ad4.mp4",
-  //     // title: ` Small Leather Goods`,
-  //   },
   {
     video: "/ad/ad7.mp4",
     // title: `Bags`,
@@ -29,7 +13,7 @@ const data = [
     // title: `Leather Goods`,
   },
   {
-    video: "/ad/ad2.mp4",
+    video: "/ad/ad3.mp4",
     // title: `Shoes`,
   },
   {
@@ -62,7 +46,7 @@ function Extra() {
             >
               <div
                 className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
-              w-[120px] h-[180px] shadow-md shadow-gray-600  rounded-md"
+              w-[180px] h-[40vh] shadow-md shadow-gray-600  rounded-md"
               >
                 {isLoading && <SkeletonLoader />}
                 {item.video ? (
@@ -100,3 +84,4 @@ function Extra() {
 }
 
 export default Extra;
+// fzyd iqiv rkvn clsi

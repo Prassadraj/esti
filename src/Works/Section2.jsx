@@ -62,7 +62,7 @@ function Section2() {
             >
               <div
                 className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[260px] tablet:w-[180px] 
-              w-[120px] h-[180px] shadow-md shadow-gray-600  rounded-md"
+             w-[180px] h-[40vh] shadow-md shadow-gray-600  rounded-md"
               >
                 {isLoading && <SkeletonLoader />}
                 {item.video ? (

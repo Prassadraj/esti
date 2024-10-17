@@ -88,7 +88,7 @@ function Section2({ scrollYProgress }) {
   return (
     <motion.div style={{ scale, rotate }} className="relative h-screen">
       <div
-        className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-3 bg-white place-items-center
+        className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-5 bg-white place-items-center
           h-full laptop:gap-10 p-2 tablet:pt-28 tablet:px-5 laptop:px-10"
       >
         {data.map((item, index) => (
