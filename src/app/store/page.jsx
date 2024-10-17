@@ -36,8 +36,8 @@ function Store() {
 
   return (
     <div className="h-screen">
-      <div className="tablet:px-10 px-2 tablet:py-5 py-3 text-center laptop:text-left">
-        <p className="laptop:text-xl font-semibold text-sm laptop:font-semibold">
+      <div className="tablet:px-10 px-2 pt-5  text-center laptop:text-left">
+        <p className="laptop:text-xl font-semibold text-base laptop:font-semibold">
           Discover Your Next Shopping Destination
         </p>
       </div>

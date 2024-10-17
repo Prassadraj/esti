@@ -43,7 +43,7 @@ function Contact() {
   };
 
   return (
-    <div className="relative p-4 laptop:p-5 laptop:h-screen bg-black  tablet:flex gap-20 justify-center items-center">
+    <div className="relative p-4 h-full py-10 laptop:p-5 laptop:h-screen bg-black  tablet:flex gap-20 justify-center items-center">
       {/* Background Video */}
       {/* <video
         autoPlay

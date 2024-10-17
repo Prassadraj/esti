@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={montserrat.className}>
         <MobileBtn>
           <Nav />
-          <div className="tablet:mt-16 mt-12">{children}</div>
+          <div className="tablet:mt-16 mt-12 ">{children}</div>
         </MobileBtn>
         <Toaster position="top-right" richColors />
         <Footer />
