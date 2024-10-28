@@ -75,8 +75,7 @@ function Section2() {
                     autoPlay
                     loop
                     muted
-                    preload="metadata" // Preload only metadata
-                    loading="lazy" // Lazy load the video
+                    preload="auto" // Preload only metadata
                     className="object-cover rounded-md h-full w-full hover:scale-100 transition-all ease-in-out duration-700"
                   ></video>
                 ) : (

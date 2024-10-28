@@ -45,6 +45,7 @@ function Section1({ scrollYProgress }) {
         className="w-full h-full object-cover hidden tablet:block"
         muted
         loop
+        preload="auto"
         src="/clothing.mp4"
       ></video>
 

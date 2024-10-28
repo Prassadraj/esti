@@ -40,7 +40,7 @@ const Section1 = ({ scrollYProgress }) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="sticky tablet:top-16 h-screen pb-[10vh] relative"
+      className="sticky tablet:top-16 h-screen pb-[10vh] "
     >
       {isLoading && <SkeletonLoader />} {/* Skeleton for video */}
       <video
@@ -49,8 +49,7 @@ const Section1 = ({ scrollYProgress }) => {
         autoPlay
         muted
         loop
-        preload="metadata"
-        loading="lazy"
+        preload="auto"
       ></video>
       <Image
         src="/mobile1.avif"

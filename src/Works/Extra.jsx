@@ -69,8 +69,8 @@ function Extra() {
                   autoPlay
                   loop
                   muted
-                  preload="metadata" // Preload only metadata
-                  loading="lazy" // Lazy load the video
+                  preload="auto" // Preload only metadata
+                  // Lazy load the video
                   className="object-cover rounded-md h-full w-full transition-all ease-in-out duration-700"
                 ></video>
               </div>
