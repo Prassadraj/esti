@@ -53,28 +53,26 @@ function About() {
       >
         <p>
           {" "}
-          India best fashion website Estilo Fashions is based in Chennai, whose
-          director Mr. Pandian is a graduate from the textile back ground, and
-          fashion industry from past 30 years.
+          Estilo Fashions, one of India's best fashion destinations, is based in
+          Chennai. The company is led by Mr. Pandian, who has a strong
+          background in textiles and has been a part of the fashion industry for
+          over 30 years.
         </p>
         <p>
-          Started the business with fabrics and had got an idea of getting into
-          retail stores with the Vision of giving the latest fashion to everyone
-          at an affordable price. With the Vision launched the first store in
-          Nelson manickam road in 2005, catering to all types of consumers from
-          newborn, men’s, women’s and kids outfits with new fashion branded
-          garments at affordable prices. Looking at the success of the store,
-          started two more stores at Anna Nagar and M.C.road, which are also
-          prime shopping places in Chennai.
+          Starting with fabrics, Mr. Pandian envisioned making the latest
+          fashion accessible to everyone at affordable prices, which led to the
+          opening of the first retail store on Nelson Manickam Road in 2005.
         </p>
         <p>
-          Currently Estilo Fashion Cloth Shop has 3 branches and a wholesale
-          division, with its corporate office in Royapuram. Catering the entire
-          are a group of consumers with above 5 lacs satisfied consumers.
+          The store caters to all types of consumers, offering a wide range of
+          garments for newborns, men, women, and kids, featuring the latest
+          branded fashion at affordable prices. Following the success of the
+          first store, Estilo Fashions expanded to two more prime shopping
+          locations in Chennai: Anna Nagar and M.C. Road.
         </p>
         <p>
-          They have already kept the company on a forever new dress track, with
-          the latest software, security systems with a strong team.
+          Today, Estilo Fashions operates three branches along with a wholesale
+          division, and its corporate office is situated in Royapuram.
         </p>
         <p>
           With the same Vision of giving the Best dress online shopping at an
@@ -83,9 +81,12 @@ function About() {
         </p>
         <p>
           {" "}
-          Now, we are launching the e-store of Estilo Fashion for all who are
-          craving online dress shopping and the easiest way to buy the best
-          apparel at an affordable price.
+          With over 500,000 satisfied customers, the company is committed to
+          providing a continuously updated collection of fashionable apparel,
+          supported by the latest software, security systems, and a dedicated
+          team. Staying true to the vision of offering the best fashion at
+          affordable prices, Estilo Fashions is on a growth path, planning to
+          open more stores in major shopping areas across Chennai.
         </p>
       </motion.div>
     </div>

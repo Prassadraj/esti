@@ -25,12 +25,7 @@ function Section5() {
     <div className="laptop:h-screen h-full flex justify-center flex-col">
       <div className="pt-5 tablet:pt-0 justify-end items-center flex flex-col gap-3 w-full">
         <p className="text-center text-base font-medium tablet:font-normal laptop:text-4xl">
-          Estilo Services
-        </p>
-
-        <p className="text-center px-1 capitalize text-sm tablet:text-base font-normal max-w-lg">
-          Estilo offers complementary wrapping on all orders, carefully packaged
-          in the Maison&apos;s iconic boxes.
+          Estilo Stores
         </p>
       </div>
 
