@@ -1,6 +1,7 @@
-"use client"; // Mark this file as a client component
+"use client";
 
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { Jacques_Francois_Shadow } from "next/font/google";
 
 // Import the font
@@ -21,7 +22,7 @@ function Section1() {
 
   useEffect(() => {
     const image = new Image();
-    image.src = "/coverpic.jpeg";
+    image.src = "/coverpic.webp";
 
     image.onload = () => {
       setIsLoading(false); // Hide skeleton loader when the image is loaded
@@ -29,35 +30,42 @@ function Section1() {
   }, []);
 
   return (
-    <div>
-      {isLoading ? (
-        <SkeletonLoader /> // Show the skeleton loader while the image is loading
-      ) : (
-        <div
-          className="h-screen"
-          style={{
-            backgroundImage: "url('/coverpic.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="flex items-end tablet:pb-20 pb-32 justify-center h-full">
-            <div className="flex flex-col items-center">
-              <p
-                className={`tablet:font-semibold font-medium tablet:text-4xl text-white capitalize`}
-              >
-                Step into Elegance
-              </p>
-              <p className="tablet:text-xl text-white text-center text-xs px-2">
-                Discover timeless styles and unmatched quality. Your perfect
-                dress awaits.
-              </p>
+    <>
+      <Head>
+        {/* Preload the background image */}
+        <link rel="preload" href="/coverpic.webp" as="image" />
+      </Head>
+
+      <div>
+        {isLoading ? (
+          <SkeletonLoader /> // Show the skeleton loader while the image is loading
+        ) : (
+          <div
+            className="h-screen"
+            style={{
+              backgroundImage: "url('/coverpic.webp')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div className="flex items-end tablet:pb-20 pb-32 justify-center h-full">
+              <div className="flex flex-col items-center">
+                <p
+                  className={`tablet:font-semibold font-medium tablet:text-4xl text-white capitalize`}
+                >
+                  Step into Elegance
+                </p>
+                <p className="tablet:text-xl text-white text-center text-xs px-2">
+                  Discover timeless styles and unmatched quality. Your perfect
+                  dress awaits.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 }
 

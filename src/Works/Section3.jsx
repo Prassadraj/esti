@@ -36,28 +36,29 @@ const Section1 = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   const [isLoading, setIsLoading] = useState(true);
+
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="sticky tablet:top-16 h-screen pb-[10vh]"
+      className="sticky tablet:top-16 h-screen pb-[10vh] relative"
     >
+      {isLoading && <SkeletonLoader />} {/* Skeleton for video */}
       <video
         src="/hm.mp4"
         className="h-full w-full object-cover hidden tablet:block"
         autoPlay
         muted
         loop
-        preload="metadata" // Preload only metadata
-        loading="lazy" // Lazy load the video
+        preload="metadata"
+        loading="lazy"
       ></video>
-      {isLoading && <SkeletonLoader />}
       <Image
         src="/mobile1.avif"
         fill
         quality={100}
         priority
         alt="image"
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
         className={`block tablet:hidden ${isLoading ? "hidden" : "block"}`}
       />
     </motion.div>
@@ -70,19 +71,19 @@ const Section2 = ({ scrollYProgress }) => {
 
   const data = [
     {
-      img: "/wo1.jpg",
+      img: "/wo1.webp",
       title: "Travel Stamp Flower T-Shirt",
     },
     {
-      img: "/wo2.jpg",
+      img: "/wo2.webp",
       title: "Neverfull Bandoulière Inside Out BB",
     },
     {
-      img: "/wo3.jpg",
+      img: "/wo3.webp",
       title: "LV Medallion Scarf",
     },
     {
-      img: "/wo4.jpg",
+      img: "/wo4.webp",
       title: "T-Shirt",
     },
   ];
@@ -103,7 +104,7 @@ const ProductCard = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true); // Track image load state
 
   return (
-    <div className="flex flex-col mb-5">
+    <div className="flex flex-col mb-5 relative">
       <Tilt
         tiltMaxAngleX={10}
         tiltMaxAngleY={10}
@@ -113,20 +114,20 @@ const ProductCard = ({ data }) => {
         transitionSpeed={500}
       >
         <div
-          className="overflow-hidden laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px]
-         h-[40vh] w-[170px] relative"
+          className="overflow-hidden relative laptop:h-[350px] laptop:w-[250px] tablet:h-[250px] tablet:w-[180px]
+         h-[40vh] w-[170px]"
         >
           {isLoading && <SkeletonLoader />} {/* Show skeleton while loading */}
           <Image
             src={data.img}
-            className={`object-cover h-full w-full transition-all ease-in-out duration-700 ${
-              isLoading ? "hidden" : "block"
+            className={`object-cover h-full w-full transition-opacity duration-700 ${
+              isLoading ? "opacity-0" : "opacity-100"
             }`}
             fill
             quality={100}
-            priority
+            loading="lazy"
             alt="image"
-            onLoadingComplete={() => setIsLoading(false)} // Set loading to false once image is loaded
+            onLoad={() => setIsLoading(false)}
           />
         </div>
       </Tilt>

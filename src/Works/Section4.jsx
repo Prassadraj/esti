@@ -56,7 +56,7 @@ function Section1({ scrollYProgress }) {
         className={`block tablet:hidden ${isLoading ? "hidden" : "block"}`}
         alt="LV Fall Collection"
         fill
-        priority // Lazy load the image
+        priority
       />
     </motion.div>
   );
@@ -65,19 +65,19 @@ function Section1({ scrollYProgress }) {
 function Section2({ scrollYProgress }) {
   const data = [
     {
-      img: "/men1.jpg",
+      img: "/men1.webp",
       title: "Only LV Mini Comfy Scarf",
     },
     {
-      img: "/men2.jpg",
+      img: "/men2.webp",
       title: "Monogram Short-Sleeved Cotton Crewneck",
     },
     {
-      img: "/men3.jpg",
+      img: "/men3.webp",
       title: "LV Gradient Bracelet",
     },
     {
-      img: "/men4.jpg",
+      img: "/men4.webp",
       title: "Multiple Wallet",
     },
   ];

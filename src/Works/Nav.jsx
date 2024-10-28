@@ -49,7 +49,7 @@ function Nav() {
       <div>
         <Link href="/">
           <Image
-            src="/estilo.png"
+            src="/estilo.webp"
             alt="Logo"
             className="w-[100px] tablet:w-[150px] object-cover"
             width={600}

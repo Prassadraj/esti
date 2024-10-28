@@ -6,19 +6,19 @@ import React, { useState } from "react";
 
 const data = [
   {
-    img: "/girl.jpg",
+    img: "/girl.webp",
     title: `Women's`,
   },
   {
-    img: "/boy.jpg",
+    img: "/boy.webp",
     title: `Men's`,
   },
   {
-    img: "/childboy.jpg",
+    img: "/childboy.webp",
     title: `Boy's`,
   },
   {
-    img: "/kidgirl.avif",
+    img: "/kidgirl.webp",
     title: `Girl's`,
   },
   {

@@ -56,9 +56,10 @@ function Contact() {
       </video> */}
 
       <Image
-        src="/contactus2.jpg"
+        src="/contactus2.webp"
         alt="Contact Us Background"
         quality={100}
+        priority
         fill
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
