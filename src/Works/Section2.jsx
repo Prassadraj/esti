@@ -50,7 +50,7 @@ function Section2() {
     <div className="h-fit w-full laptop:px-16 px-2">
       <div className="flex justify-center items-center w-full tablet:h-[10rem] h-[6rem]">
         <p className="tablet:text-4xl text-sm font-medium text-center ">
-          {`Explore a Selection of the Maison's Creations`}
+          {`Our Collections`}
         </p>
       </div>
       <div className="grid grid-cols-2 tablet:grid-cols-4 tablet:gap-4 gap-5 laptop:gap-10">

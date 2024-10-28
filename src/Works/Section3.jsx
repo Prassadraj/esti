@@ -19,10 +19,8 @@ export default function Home() {
   return (
     <>
       <div className="h-[10rem] justify-center items-center flex flex-col gap-3">
-        <p className="text-center text-sm font-medium">Women</p>
-        <p className="text-center capitalize text-4xl font-light">
-          Flight mode
-        </p>
+        {/* <p className="text-center text-sm font-medium">Women</p> */}
+        <p className="text-center capitalize text-4xl font-light">Women</p>
       </div>
       <main ref={container} className="relative h-[200vh]">
         <Section1 scrollYProgress={scrollYProgress} />

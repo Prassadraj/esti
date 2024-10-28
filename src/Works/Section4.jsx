@@ -17,8 +17,8 @@ function Section4() {
   return (
     <>
       <div className="h-[10rem] justify-start laptop:justify-center items-center flex flex-col gap-3">
-        <p className="text-center text-sm font-medium">Men</p>
-        <p className="text-center capitalize text-4xl font-light">LV Fall</p>
+        {/* <p className="text-center text-sm font-medium">Men</p> */}
+        <p className="text-center capitalize text-4xl font-light">Men</p>
       </div>
       <div className="relative h-[200vh]" ref={container}>
         <Section1 scrollYProgress={scrollYProgress} />
