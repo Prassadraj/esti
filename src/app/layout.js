@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           <Nav />
           <div className="tablet:mt-16 mt-12 ">{children}</div>
         </MobileBtn>
-        <Toaster position="top-right" richColors />
+        <Toaster position="top-right" duration={200} richColors />
         <Footer />
       </body>
     </html>
