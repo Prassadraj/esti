@@ -53,40 +53,40 @@ function About() {
       >
         <p>
           {" "}
-          Estilo Fashions, one of India's best fashion destinations, is based in
+          {`Estilo Fashions, one of India's best fashion destinations, is based in
           Chennai. The company is led by Mr. Pandian, who has a strong
           background in textiles and has been a part of the fashion industry for
-          over 30 years.
+          over 30 years.`}
         </p>
         <p>
-          Starting with fabrics, Mr. Pandian envisioned making the latest
+          {`Starting with fabrics, Mr. Pandian envisioned making the latest
           fashion accessible to everyone at affordable prices, which led to the
-          opening of the first retail store on Nelson Manickam Road in 2005.
+          opening of the first retail store on Nelson Manickam Road in 2005.`}
         </p>
         <p>
-          The store caters to all types of consumers, offering a wide range of
+          {`The store caters to all types of consumers, offering a wide range of
           garments for newborns, men, women, and kids, featuring the latest
           branded fashion at affordable prices. Following the success of the
           first store, Estilo Fashions expanded to two more prime shopping
-          locations in Chennai: Anna Nagar and M.C. Road.
+          locations in Chennai: Anna Nagar and M.C. Road.`}
         </p>
         <p>
-          Today, Estilo Fashions operates three branches along with a wholesale
-          division, and its corporate office is situated in Royapuram.
+          {`Today, Estilo Fashions operates three branches along with a wholesale
+          division, and its corporate office is situated in Royapuram.`}
         </p>
         <p>
-          With the same Vision of giving the Best dress online shopping at an
+          {`With the same Vision of giving the Best dress online shopping at an
           affordable price, is on the growth path planning 10 stores in Chennai
-          at major shopping locations.
+          at major shopping locations.`}
         </p>
         <p>
           {" "}
-          With over 500,000 satisfied customers, the company is committed to
+          {`With over 500,000 satisfied customers, the company is committed to
           providing a continuously updated collection of fashionable apparel,
           supported by the latest software, security systems, and a dedicated
           team. Staying true to the vision of offering the best fashion at
           affordable prices, Estilo Fashions is on a growth path, planning to
-          open more stores in major shopping areas across Chennai.
+          open more stores in major shopping areas across Chennai.`}
         </p>
       </motion.div>
     </div>
