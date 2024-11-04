@@ -68,6 +68,7 @@ function Extra() {
                   src={item.video}
                   autoPlay
                   loop
+                  playsInline
                   muted
                   preload="auto" // Preload only metadata
                   // Lazy load the video

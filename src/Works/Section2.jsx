@@ -73,6 +73,7 @@ function Section2() {
                   <video
                     src={item.video}
                     autoPlay
+                    playsInline
                     loop
                     muted
                     preload="auto" // Preload only metadata
