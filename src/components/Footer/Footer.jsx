@@ -51,6 +51,13 @@ function Footer() {
           Estilo Fashions © 2024 | All Rights Reserved.
         </p>
       </div>
+      <a
+        className=""
+        href="https://www.linkedin.com/in/prassad-raj-54805123a/"
+        target="_blank"
+      >
+        <p className="text-gray-300">Prassad Raj R</p>
+      </a>
     </div>
   );
 }
